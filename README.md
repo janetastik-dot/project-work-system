@@ -2,12 +2,13 @@
 
 This repository groups Jane's reusable project workflow skills into one place.
 
-The system is designed to help a user and an AI agent work in the same language, with clear structure, visible assumptions, and a repeatable handoff between project stages.
+The system is designed to help a user and an AI agent work in the same language, with clear structure, visible assumptions, and a repeatable handoff between project stages. It also gives the workflow a safe way to ask domain experts for input when the team does not know enough yet.
 
 ## Current workflow modules
 
 - `project-work-system/01-grill-me/SKILL.md` — Step 1. Stress-test and clarify a new project, task, idea, plan, or workflow until shared understanding exists.
 - `project-work-system/02-to-prd/SKILL.md` — Step 2. Convert the clarified context into a PRD that can later be broken into implementation issues.
+- `project-work-system/03-to-issues/SKILL.md` — Step 3. Break an approved PRD, plan, spec, or project context into independently grabbable tracer-bullet issues.
 
 ## Intended full workflow
 
@@ -26,7 +27,9 @@ project-work-system/
 └── project-work-system/
     ├── 01-grill-me/
     │   └── SKILL.md
-    └── 02-to-prd/
+    ├── 02-to-prd/
+    │   └── SKILL.md
+    └── 03-to-issues/
         └── SKILL.md
 ```
 
@@ -34,4 +37,5 @@ project-work-system/
 
 - Each workflow module keeps its own `SKILL.md` so it can still be reused independently.
 - The numbered folders preserve the intended order of the workflow.
-- Future skills can be added as `03-to-issues`, `04-tdd`, `05-triage`, `06-prototype`, and `07-zoom-out`.
+- `to-issues` prepares implementation issues for Step 4 `tdd`, but final readiness and AFK execution decisions belong to Step 5 `triage`.
+- Future skills can be added as `04-tdd`, `05-triage`, `06-prototype`, and `07-zoom-out`.
