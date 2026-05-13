@@ -10,6 +10,7 @@ The system is designed to help a user and an AI agent work in the same language,
 - `project-work-system/02-to-prd/SKILL.md` — Step 2. Convert the clarified context into a PRD that can later be broken into implementation issues.
 - `project-work-system/03-to-issues/SKILL.md` — Step 3. Break an approved PRD, plan, spec, or project context into independently grabbable tracer-bullet issues.
 - `project-work-system/04-tdd/SKILL.md` — Step 4. Build one approved issue with a behavior-first red-green-refactor loop, then hand the result to triage.
+- `project-work-system/05-triage/SKILL.md` — Step 5. Triage issues and TDD handoffs through a readiness, routing, priority, and state-machine gate.
 
 ## Intended full workflow
 
@@ -17,7 +18,7 @@ The system is designed to help a user and an AI agent work in the same language,
 - Step 2: `to-prd` — Turn the current context into a PRD.
 - Step 3: `to-issues` — Break the PRD into independently grabbable tracer-bullet issues.
 - Step 4: `tdd` — Build one issue with a red-green-refactor loop.
-- Step 5: `triage` — Move issues through a role-based state machine.
+- Step 5: `triage` — Move issues and TDD handoffs through a readiness and routing state machine.
 - Step 6: `prototype` — Build a throwaway prototype to test design decisions.
 - Step 7: `zoom-out` — Review the bigger picture before looping into the next development phase.
 
@@ -32,14 +33,20 @@ project-work-system/
     │   └── SKILL.md
     ├── 03-to-issues/
     │   └── SKILL.md
-    └── 04-tdd/
+    ├── 04-tdd/
+    │   ├── SKILL.md
+    │   └── references/
+    │       ├── deep-modules.md
+    │       ├── interface-design.md
+    │       ├── mocking.md
+    │       ├── refactoring.md
+    │       └── tests.md
+    └── 05-triage/
         ├── SKILL.md
         └── references/
-            ├── deep-modules.md
-            ├── interface-design.md
-            ├── mocking.md
-            ├── refactoring.md
-            └── tests.md
+            ├── agent-briefs.md
+            ├── out-of-scope.md
+            └── state-machine.md
 ```
 
 ## Notes
@@ -48,4 +55,5 @@ project-work-system/
 - The numbered folders preserve the intended order of the workflow.
 - `to-issues` prepares implementation issues for Step 4 `tdd`, but final readiness and AFK execution decisions belong to Step 5 `triage`.
 - `tdd` works one issue at a time, keeps tests focused on observable behavior, and ends with a handoff to Step 5 `triage`.
-- Future skills can be added as `05-triage`, `06-prototype`, and `07-zoom-out`.
+- `triage` decides state, priority, owner route, expert-input needs, and whether the next move is review, TDD, prototype, zoom-out, or another workflow step.
+- Future skills can be added as `06-prototype` and `07-zoom-out`.
